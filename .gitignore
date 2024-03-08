@@ -7,6 +7,7 @@ plugins/*
 !techarq-blocks-main
 themes/*
 !techarq
+w3tc-config
 
 
 
