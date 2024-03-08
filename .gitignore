@@ -1,0 +1,12 @@
+node_modules
+uploads
+languages
+ai1wm-backups
+vendor
+plugins/*
+!techarq-blocks-main
+themes/*
+!techarq
+
+
+

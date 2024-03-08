@@ -1,0 +1,53 @@
+/* Colors */
+$colors: (white: #ffffff,
+body-color: #162948,
+main-blue: #352BEB, 
+main-purple: #5F27CD,
+green: #74E6C1,
+light-blue: #45AAF2);
+
+$primary: #112339;
+$primary-transparent: #11233985;
+$secondary: #da6911;
+$tag-hover: #e94c3633;
+
+$greys: (
+  "module-bgd": #f5f5f5,
+  "tag-bgd": #d9d9d96e,
+  "line-grey": #a9a9a9,
+  "scrollbar": #D7D7D7,
+);
+
+$transparent: rgba(0, 0, 0, 0);
+$semi-transparent: rgba(0, 0, 0, 50%);
+
+$tag-hover: #e94c3633;
+$link-blue: #00499e;
+$black: #000000;
+$dark: #333333;
+$white: #ffffff;
+$dark-dots: #262626;
+$dark-caption: #303030;
+
+/* Fonts */
+$font: 'Plus Jakarta Sans', sans-serif;
+
+$breakpoints: (
+  xs: 350px,
+  sm: 576px,
+  sm2: 507px,
+  md: 768px,
+  lg2: 800px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1350px,
+);
+
+$font-weight: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "semi-bold": 600,
+  "bold": 700,
+  "bolder": 800
+);

@@ -1,0 +1,120 @@
+@import '../../../assets/scss/blocks';
+
+.faqs, 
+.editor-styles-wrapper .faqs {
+    &-container {
+        background: none;
+        margin: 0 auto !important;
+        max-width: 1440px !important;
+        width: 100% !important;
+        padding: 0 60px;
+
+        @include respond-below(xl) {
+            padding: 0 40px;
+        }
+
+        @include respond-below(md) {
+            padding: 0 15px;
+        }
+    }
+
+    &-area {
+        padding-top: 0;
+        
+        .accordion {
+            list-style-type: none;
+            margin-bottom: 30px;
+
+            &>li {
+                border-bottom: 1px solid $semi-transparent;
+            }
+
+            .question {
+                span {
+                    display: block;
+                    padding: 30px 150px 30px 0;
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: map-get($colors, body-color);
+                    // border-top: 1px solid #e4e6fb;
+                    position: relative;
+                    color: $primary-transparent;
+                    transition: color .3s;
+                    cursor: pointer;
+                    @include respond-below(md) {
+                        padding: 25.5px 42.5px 25.5px 0;
+                    }
+                    &.acc-current {
+                        color: $primary;
+                        &:after {
+                            background: url('./../../assets/icons/minus.svg') no-repeat;
+                            transform: none;
+                        }
+                    }
+
+                    &:after {
+                        content: "";
+                        background: url('./../../assets/icons/plus.svg') no-repeat;
+                        width: 25px;
+                        height: 25px;
+                        position: absolute;
+                        right: 0px;
+                        top: 32px;
+                        display: block;
+                        @include transition(all, 0.4s, ease-in-out);
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+            .accordion-content {
+                padding-bottom: 30px;
+                color: $black;
+                p {
+                    font-size: 18px;
+                    line-height: 26.5px;
+
+                    @include respond-below(lg) {
+                        font-size: 16px;
+                        line-height: 24.5px;
+                    }
+
+                    //color: rgba(#162948, 0.8);
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        color: $primary;
+
+                        &:hover {
+                            color: $secondary;
+                        }
+                    }
+                }
+                ul {
+                    padding: .5rem 0 .5rem 1.3rem;
+                }
+            }
+        }
+
+        .heading-block {
+            .subheadline {
+                margin-bottom: 30px;
+            }
+            a.button.button--primary {
+                color: white;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .services-placeholder {
+        justify-content: center;
+        padding-bottom: 10px !important;
+    }
+}
+
+

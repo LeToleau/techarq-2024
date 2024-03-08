@@ -1,0 +1,39 @@
+.wc-container {
+    max-width: 1123px !important;
+
+    @include respond-below(xl) {
+        max-width: 750px !important;
+    }
+
+    /*.entry-content {
+        &>*:not(.js-single-container) {
+            display: none;
+        }
+    }*/
+
+    .is-post-header {
+        @include respond-below (xl){
+            padding: 0 20px !important;
+        }
+    }
+}
+
+.techarq-container,
+.editor-styles-wrapper .techarq-container {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+
+    @include respond-below(md) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}

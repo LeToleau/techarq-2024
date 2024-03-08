@@ -1,0 +1,30 @@
+.wysiwyg{
+    p{
+        ul{
+            list-style-type: disc;
+        }
+
+        a{
+            border: none;
+            transition: .3s all;
+
+            &:hover{
+                color: map-get($colors, main-purple);
+            }
+        }
+
+    }
+
+    ul li{
+        list-style-type: disc !important;
+    }
+
+    a{
+        border: none;
+        transition: .3s all;
+
+        &:hover{
+            color: map-get($colors, main-purple);
+        }
+    }
+}

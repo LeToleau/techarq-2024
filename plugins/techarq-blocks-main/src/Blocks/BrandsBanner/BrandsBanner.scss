@@ -1,0 +1,55 @@
+@import '../../../assets/scss/blocks';
+
+.brands-banner,
+.editor-styles-wrapper .brands-banner {
+
+    &__title,
+    &__image {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    &__images {
+        display: flex;
+        gap: 15px;
+        padding: 40px 0 0;
+        justify-content: center;
+        align-items: center;
+
+        @include respond-below(lg) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__image {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        width: 100%;
+
+        @include respond-below(xl) {
+            width: 20%;
+        }
+
+        @include respond-below(lg) {
+            width: 30%;
+        }
+
+        @include respond-below(md) {
+            width: 45%;
+        }
+
+        @include respond-below(sm) {
+            height: 120px;
+        }
+    }
+}
+
+.editor-styles-wrapper .brands-banner {
+    &__title,
+    &__image {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

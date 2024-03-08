@@ -1,0 +1,46 @@
+// MIN-WIDTH
+@mixin respond-above($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+		@media (min-width: $breakpoint-value) {
+			@content;
+		}
+	}
+}
+// MAX-WIDTH
+@mixin respond-below($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+		@media (max-width: $breakpoint-value - 1) {
+			@content;
+		}
+	}
+}
+
+// respond between
+@mixin respond-between($breakpoint1, $breakpoint2) {
+  @if map-has-key($breakpoints, $breakpoint1) and map-has-key($breakpoints, $breakpoint2) {
+    $breakpoint1-value: map-get($breakpoints, $breakpoint1);
+    $breakpoint2-value: map-get($breakpoints, $breakpoint2);
+    @media (min-width: $breakpoint1-value) and (max-width: $breakpoint2-value - 1) {
+      @content;
+    }
+  }
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+// Transition
+@mixin transition($property, $duration, $animation) {
+    -webkit-transition: $property $duration $animation;
+    -moz-transition: $property $duration $animation;
+    -ms-transition: $property $duration $animation;
+    -o-transition: $property $duration $animation;
+    transition: $property $duration $animation;
+}

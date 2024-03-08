@@ -1,0 +1,151 @@
+.button,
+a.button,
+.editor-styles-wrapper .button,
+
+.editor-styles-wrapper a.button {
+    &--primary {
+        font-family: $font;
+        display: flex;
+        align-items: center;
+        max-width: max-content !important;
+        padding: 12px 32px !important;
+        border-radius: 5px;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        position: relative;
+        text-align: center;
+        border: 1px solid $primary;
+        background: linear-gradient(to right, white 49%, $primary 50%);
+        // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all 0.3s;
+        text-decoration: none;
+        text-transform: uppercase;
+        box-shadow: 0px 1px 2px 1px rgba(0,0,0,.20);
+        -webkit-box-shadow: 0px 1px 2px 1px rgba(0,0,0,.20);
+        -moz-box-shadow: 0px 1px 2px 1px rgba(0,0,0,.20);
+        
+        @include respond-below(md) {
+            &:not(.wcbfse-btn--secondary) {
+                max-width: 100% !important;
+                justify-content: center;
+            }
+        }
+
+        @include respond-below(sm) {
+            font-size: 14px;
+        }
+      
+        .btn-arrow {
+          background: url("../img/icons/arrow-btn.svg");
+          display: inline-block;
+          height: 24px;
+          width: 24px;
+          border-radius: 16px 0px;
+          overflow: hidden;
+          background-position: 0px 0px;
+          transition: 0.2s 0.3s all;
+        }
+
+        &:hover {
+            background: linear-gradient(to right, white 50%, $primary 50%);
+            background-size: 200% 100%;
+            background-position: left bottom;
+            color: #112339;
+        
+            .btn-arrow {
+              background: url("../img/icons/arrow-btn-white.svg");
+              background-position: 24px -24px;
+            }
+        
+            .btn-newsletter {
+              background-position: 34px -16px;
+            }
+        
+            span {
+              color: $white;
+            }
+        }
+    }
+}
+
+.techarq-block .techarq-button {
+    font-size: 20px;
+    line-height: 1;
+    background: none;
+
+    &.button {
+        position: relative;
+        color: #5f27cd;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -o-border-radius: 25px;
+        border: 1px solid rgba(95,39,205,.2);
+        padding: 15px 25px 12px 25px;
+        font-weight: 500;
+        line-height: 1;
+        display: inline-block;
+        margin-right: 10px;
+
+        &:fill {
+            background-color: #6027ce;
+            border: none;
+        }
+        
+        &:hover {
+            color: map-get($colors, main-purple);
+            border: 1px solid rgba(#5F27CD, 1);
+            background-color: transparent;
+        }
+    }
+
+    &.sign-up-btn {
+        margin-right: 10px;
+        background-color: #fff;
+        color: #162948;
+        padding: 15px 25px 12px 25px;
+        font-weight: 500;
+        line-height: 1;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -o-border-radius: 25px;
+        display: inline-block;
+
+        &:hover {
+            color: map-get($colors, main-purple);
+        }
+    }
+
+    &.read-more-button {
+        font-family: $font;
+        font-size: 15px;
+        line-height: 20.5px;
+        color: $link-blue !important;
+        font-weight: map-get($font-weight, 'bold' );
+        margin-top: 16px;
+    }
+
+    &.button-inline {
+        display: inline-block;
+        margin: 0 30px 16px 0;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+.editor-styles-wrapper {
+    .wc-cta-button {
+        &.wp-block-button {
+            .wp-block-button__link {
+                @extend .wp-block-button__link;
+            }
+        }
+    }
+}

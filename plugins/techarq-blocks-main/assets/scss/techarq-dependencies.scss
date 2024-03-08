@@ -1,0 +1,224 @@
+@import './utils/mixins';
+@import './utils/vars';
+
+.techarq-template {
+    &>*:not(section) {
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1440px;
+    }
+
+    p {
+        font-family: 'Josefin Sans';
+        font-size: 18px;
+        line-height: 1.3;
+    }
+}
+/*
+.techarq-block,
+.editor-styles-wrapper .techarq-block {
+    .wrapper {
+        max-width: 1185px;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .big-wrapper {
+        max-width: 1240px;
+        margin: 0 auto;
+        width: 90%;
+        .s-wrapper {
+            width: 100%;
+        }
+    }
+
+    .med-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .ms-wrapper {
+        max-width: 770px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .s-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .valign-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .row {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .col {
+            float: left;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.75rem;
+            min-height: 1px;
+
+            &.l3 {
+                width:25%;
+                margin-left:auto;
+                left:auto;
+                right:auto
+            }
+
+            &.l4 {
+                @include respond-above(lg) {
+                    width:33.3333333333%;
+                    margin-left:auto;
+                    left:auto;
+                    right:auto
+                }
+            }
+
+            &.l5 {
+                width:41.6666666667%;
+                margin-left:auto;
+                left:auto;
+                right:auto;
+            }
+
+            &.l6 {
+                width: 50%;
+                margin-left: auto;
+                left: auto;
+                right: auto;            
+            }
+
+            &.l7 {
+                width: 58.3333333333%;
+                margin-left: auto;
+                left: auto;
+                right: auto;            
+            }
+
+            &.l12 {
+                width: 100%;
+                margin-left: auto;
+            }
+
+            &.m6 {
+                @include respond-below(lg) {
+                    width: 50%;
+                    margin-left: auto;
+                    left: auto;
+                    right: auto;
+                }
+            }
+
+            &.m12 {
+                @include respond-below(lg) {
+                    width: 100%;
+                    margin-left: auto;
+                    left: auto;
+                    right: auto;
+                }
+            }
+
+            &.s12 {
+                @include respond-below(lg) {
+                    width: 100%;
+                    margin-left: auto;
+                    left: auto;
+                    right: auto;
+                }
+            }
+
+            &.track-col2 {
+                @include respond-above(lg) {
+                    width: 33.33% !important;
+                }
+
+                @include respond-above(xl) {
+                    width: 20% !important;
+                }
+            }
+
+        }
+    }
+
+    .row-reverse {
+        display: flex;
+        flex-flow: row-reverse;
+        @include respond-below(lg) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .two-cols {
+        @include respond-below(md) {
+            float: left !important; 
+            width:  50% !important; 
+        }
+    }
+
+    .padding-content-area {
+        &.col {
+            padding-right: 80px;
+
+            @include respond-below(xxl) {
+                padding-right: 0;
+            }
+
+            @include respond-below(lg) {
+                margin-bottom: 50px;
+            }
+
+            @include respond-below(md) {
+                padding-right: 7.5px;
+            }
+        }
+        
+        p {
+            font-size: 26px;
+            line-height: 36px;
+
+            @include respond-below(xxl) {
+                font-size: 23px;
+                line-height: 32px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 22px;
+                line-height: 31px;
+            }
+        }
+    }
+
+    .center-align {
+        text-align: center;
+    }
+} */
+
+/*
+.techarq-template,
+.techarq-page {
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    height: 100vh;
+    section.block {
+        scroll-snap-align: start;
+    }
+}
+*/

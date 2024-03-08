@@ -1,0 +1,274 @@
+@import '../../../assets/scss/blocks';
+
+.contact-cta,
+.editor-styles-wrapper .contact-cta {
+    background-color: #CDCDCD;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        padding: 100px 50px;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        @include respond-below(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title-wrapper {
+        width: 0;
+        position: relative;
+        transition: all .75s;
+    }
+    
+    &__title {
+        font-size: 38px;
+        line-height: 1.2;
+        color: $primary;
+        width: 60vw;
+        text-shadow: -2px 4px 8px hsl(0deg 0% 41.09% / 60%);
+
+        @include respond-below(md) {
+            width: 90vw;
+            font-size: 22px;
+        }
+    }
+
+    &__cta-wrapper {
+        opacity: 0;
+        transform: translateX(40px);
+        transition: all .5s;
+    }
+
+    &__cta {
+        color: $primary;
+        font-size: 14px;
+        background: linear-gradient(90deg,#898989 49%,#FFFFFF 50%);
+        background-position: 99% 100%;
+        background-size: 200% 100%;
+        border: 1px solid #898989;
+
+        &.button--primary:hover {
+            background: linear-gradient(90deg,#898989 50%,#FFFFFF 49%);
+            background-position: 0 100%;
+            background-size: 200% 100%;
+            color: $white;
+            border: 1px solid $white;
+            box-shadow: none;
+        }
+    }
+
+    &__modal {
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        z-index: -5;
+        background-color: $semi-transparent;
+        opacity: 0;
+        
+        &.open {
+            opacity: 1;
+            z-index: 9999;
+            transition: .5s;
+            
+            .contact-cta__form {
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        &-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 22px;
+            width: 22px;
+            cursor: pointer;
+
+            svg {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }            
+        }
+    }
+
+    &__form {
+        padding: 3vh 3vw;
+        background-color: $white;
+        border-radius: 3px;
+        opacity: 0;
+        transition: opacity .5s, scale .3s;
+        transition-delay: .3s;
+        scale: 0.1;
+
+        &-title {
+            &::after {
+                bottom: -10px;
+            }
+        }
+
+        &>div {
+            max-width: max-content;
+            max-height: max-content;
+
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 25vw;
+                gap: 4%;
+                
+                p {
+                    width: 48%;
+                    margin-bottom: 12px;
+
+                    &:nth-child(6),
+                    &:nth-child(7),
+                    &:nth-child(8) {
+                        width: 100%;
+                    }
+
+                    &:nth-child(8) {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 0;
+                        position: relative;
+
+                        input {
+                            margin-top: 0;
+                            font-family: $font;
+                            display: flex;
+                            align-items: center;
+                            max-width: max-content !important;
+                            padding: 8px 40px !important;
+                            border-radius: 5px;
+                            gap: 8px;
+                            cursor: pointer;
+                            font-size: 18px;
+                            font-weight: 600;
+                            position: relative;
+                            text-align: center;
+                            border: 1px solid $primary;
+                            background: linear-gradient(to right, $primary 50%, $transparent 50%);
+                            color: $primary;
+                            // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+                            background-size: 201% 100%;
+                            background-position: right bottom;
+                            transition: all 0.3s;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            box-shadow: 0px 2px 2px 1px rgba(0,0,0,.20);
+                            -webkit-box-shadow: 0px 2px 2px 1px rgba(0,0,0,.20);
+                            -moz-box-shadow: 0px 2px 2px 1px rgba(0,0,0,.20);
+                            
+                            @include respond-below(md) {
+                                &:not(.wcbfse-btn--secondary) {
+                                    max-width: 100% !important;
+                                    justify-content: center;
+                                }
+                            }
+
+                            @include respond-below(sm) {
+                                font-size: 14px;
+                            }
+
+                            &:hover {
+                                background-position: left bottom;
+                                color: $white;
+                            
+                                .btn-arrow {
+                                  background: url("../img/icons/arrow-btn-white.svg");
+                                  background-position: 24px -24px;
+                                }
+                            
+                                .btn-newsletter {
+                                  background-position: 34px -16px;
+                                }
+                            
+                                span {
+                                  color: $primary;
+                                }
+                            }
+                        }
+                    }
+
+                    input,
+                    textarea {
+                        margin-top: 6px;
+                        width: 100%;
+                        font-family: $font;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: $primary;
+                        background-color: none;
+                        border: none;
+                        border-bottom: 1px solid rgb(17 34 57 / 25%);
+
+                        &:focus-visible {
+                            outline: 0;
+                            border-bottom: 1px solid rgb(17 34 57 / 40%);
+                        }
+                    }
+
+                    input {
+                        padding: 4px 4px 4px 7px;
+                    }
+
+                    textarea {
+                        padding: 10px;
+                    }
+
+                    .wpcf7-spinner {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        transform: translate(100px,0px);
+                    }
+                }
+
+                .wpcf7-response-output {
+                    color: $primary;
+                    border: none;
+                    padding: 8px 0 0;
+                    margin: 0;
+                    font-size: 14px;
+                }
+
+                .wpcf7-not-valid-tip {
+                    color: $secondary;
+                    font-size: 12px;
+                    margin-top: 2px;
+                }
+
+                label {
+                    color: $primary;
+                    font-family: $font;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+.editor-styles-wrapper .contact-cta {
+    &__cta-wrapper {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    &__title-wrapper {
+        width: 100%;
+    }
+}

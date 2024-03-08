@@ -1,0 +1,51 @@
+{
+    "key": "group_64ecb730537a4",
+    "title": "Block Options -> Background Color",
+    "fields": [
+        {
+            "key": "field_64ecb7528ca33",
+            "label": "Background Color",
+            "name": "preserve_background_color",
+            "type": "button_group",
+            "instructions": "Set to 'Color' for preserving the background color on spacing.\r\nSet to 'Transparent' if you want to limit background color to the block's content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "true": "Color",
+                "flase": "Transparent"
+            },
+            "allow_null": 0,
+            "default_value": "true",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/about-us"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/about-us"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1696356318
+}

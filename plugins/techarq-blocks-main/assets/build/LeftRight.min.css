@@ -1,0 +1,2 @@
+.left-right__container{padding:0 60px}.left-right__content{display:flex;flex-direction:column;gap:100px}.left-right__row{display:grid;gap:40px;grid-template-columns:1fr 1fr}.left-right__row-text{display:flex;flex-direction:column;justify-content:center}.left-right__row-text>p{font-size:20px}.left-right__row-image img{height:100%;object-fit:cover;width:100%}.left-right__row.reverse .left-right__row-text{order:2}.left-right__row.reverse .left-right__row-image{order:1}
+/*# sourceMappingURL=LeftRight.min.css.map*/

@@ -1,0 +1,70 @@
+{
+	"name": "whitecanvas/techarqblocks",
+	"type": "project",
+	"description": "Custom ACF blocks for Digital ML website.",
+	"autoload": {
+        "psr-4": {
+            "TecharqBlocks\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Conic Dev",
+            "email": "oliveriobaroni@gmail.com"
+        }
+    ],
+	"keywords": [
+		"phpcs",
+		"standards",
+		"WordPress"
+	],
+	"license": "MIT",
+	"require": {},
+	"require-dev": {
+		"php": ">=5.4",
+		"squizlabs/php_codesniffer": "^3.3.1",
+		"wp-coding-standards/wpcs": "^2.3",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+		"phpcompatibility/php-compatibility": "^9.0",
+		"phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^9.0",
+		"phpcsstandards/phpcsdevtools": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "*"
+	},
+	"suggest": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically."
+	},
+	"minimum-stability": "RC",
+	"scripts": {
+		"check-cs": [
+			"@php ./vendor/squizlabs/php_codesniffer/bin/phpcs"
+		],
+		"report-cs": [
+			"@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --report=junit --report-file=report-php.xml"
+		],
+		"fix-cs": [
+			"@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"
+		],
+		"install-codestandards": [
+			"Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+		],
+		"run-tests": [
+			"@php ./vendor/phpunit/phpunit/phpunit --filter WordPress --bootstrap=\"./vendor/squizlabs/php_codesniffer/tests/bootstrap.php\" ./vendor/squizlabs/php_codesniffer/tests/AllTests.php"
+		],
+		"check-complete": [
+			"@php ./vendor/phpcsstandards/phpcsdevtools/bin/phpcs-check-feature-completeness -q ./WordPress"
+		],
+		"check-complete-strict": [
+			"@php ./vendor/phpcsstandards/phpcsdevtools/bin/phpcs-check-feature-completeness ./WordPress"
+		]
+	},
+	"support": {
+		"issues": "https://github.com/WordPress/WordPress-Coding-Standards/issues",
+		"wiki": "https://github.com/WordPress/WordPress-Coding-Standards/wiki",
+		"source": "https://github.com/WordPress/WordPress-Coding-Standards"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}

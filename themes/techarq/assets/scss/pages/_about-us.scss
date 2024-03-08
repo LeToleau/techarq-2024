@@ -1,0 +1,214 @@
+.techarq-about {
+
+    .techarq-title {
+        @media (max-width: 574px) {
+            width: auto !important;
+        }
+    }
+    
+    &__hero {
+        max-width: none !important;
+        padding: 0 !important;
+
+        &-bgd {
+            display: flex;
+            background-attachment: fixed;
+            background-position-y: 35%;
+            background-position-x: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+
+        height: 80vh;
+        width: 100%;
+        display: flex;
+    }
+
+    &__heading {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media screen and (max-width: 992px) {
+            padding-left: 40px !important;
+            padding-right: 40px !important;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+    }
+
+    &__title-wrapper {
+        background-color: white;
+        display: flex;
+        margin: 0 0 0 40px;
+        position: relative;
+        padding-top: 12px;
+        border-radius: 3px;
+        z-index: 2;
+        max-width: 100%;
+        mix-blend-mode: hard-light;
+
+        @media screen and (max-width: 992px) {
+            margin: 0 0 0 30px;
+        }
+
+        @media screen and (max-width: 767px) {
+            margin: 0 0 0 15px;
+        }
+    }
+
+    &__title-wrapper {
+        margin: 0;
+
+        @media screen and (max-width: 767px) {
+            max-width: none;
+        }
+    }
+
+    &__title {
+        font-size: 8ch;
+        line-height: .9;
+        font-weight: 1000;
+        // mix-blend-mode: hard-light;
+        color: #c1bebe;
+        -webkit-font-smoothing: antialiased;
+
+        &::after {
+            background-color: rgb(17, 35, 57);
+            bottom: -22px;
+            height: 8px;
+            width: 40%;
+            border-radius: 3px;
+            z-index: -1;
+
+            @media screen and (max-width: 992px) {
+                height: 14px;
+            }
+        }
+
+        @media screen and (max-width: 1440px) {
+            font-size: 6ch;
+        }
+
+        @media screen and (max-width: 992px) {
+            font-size: 5ch;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 4ch;
+        }
+    }
+
+    &__heading, &__container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__container {
+        padding: 20px 0 40px;
+
+        @media screen and (max-width: 992px) {
+            padding: 30px 40px !important;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding: 30px 15px !important;
+        }
+
+        p, ul, h1, h2, h3, h4, h5, h6 {
+            color: rgb(17, 35, 57);
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 600;
+
+            @media screen and (max-width: 992px) {
+                font-size: 22px;
+                line-height: 28px;
+            }
+
+            strong {
+                font-weight: 800;
+            }
+        }
+
+        h4 {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 600;
+
+            @media screen and (max-width: 992px) {
+                font-size: 18px;
+                line-height: 26px;
+            }
+
+            strong {
+                font-weight: 800;
+            }
+        }
+
+        p, ul {
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: .1px;
+
+            @media screen and (max-width: 992px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        ul {
+            list-style-position: inside;
+            padding-left: 16px;
+            list-style-type: square;
+
+            li::marker {
+                font-size: 27px;
+                color: #c1bebe;
+            }
+        }
+
+        .wp-block-gallery {
+            padding: 40px 0;
+        }
+
+        .wp-block-image .alignright {
+            margin: 0.5em 0 0.5em 3em;
+
+            @media screen and (max-width: 767px) {
+                margin: 0 0 24px 0;
+
+                img {
+                    height: 100% !important;
+                }
+            }
+        }
+
+        .wp-block-image .alignleft {
+            margin: 0.5em 3em 0.5em 0;
+
+            @media screen and (max-width: 767px) {
+                margin: 0 0 24px 0;
+
+                img {
+                    height: 100% !important;
+                }
+            }
+        }
+    }
+
+    .heateor_sss_sharing_container {
+        padding-top: 40px;
+        padding-left: 0;
+    }
+}

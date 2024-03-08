@@ -1,0 +1,55 @@
+.site > .entry-content > *:not(section) {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 16px;
+}
+
+.site > .entry-content > section {
+    // margin-bottom: 60px;
+}
+
+.entry-content {
+    margin-left: auto;
+    margin-right: auto;
+    * {
+        font-family:'Plus Jakarta Sans', sans-serif;
+    }
+}
+
+.heateorSssClear {
+    margin-bottom: 0 !important;
+}
+
+.heateor_sss_sharing_container.heateor_sss_horizontal_sharing {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 60px 24px;
+
+    @media screen and (max-width: 1199px) {
+        padding: 0 40px 24px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 0 15px 24px;
+    }
+
+    .heateor_sss_sharing_title {
+        margin-bottom: 16px
+    }
+
+    .heateor_sss_sharing_ul {
+        display: flex;
+        gap: 8px;
+
+        .heateor_sss_svg {
+            filter: grayscale(.6);
+            transition: .3s;
+
+            &:hover {
+                filter: none;
+            }
+        }
+    }
+}
+
